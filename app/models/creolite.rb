@@ -1,0 +1,2 @@
+class Creolite < ApplicationRecord
+end
