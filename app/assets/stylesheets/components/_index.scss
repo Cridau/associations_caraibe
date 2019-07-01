@@ -4,9 +4,6 @@
 @import "navbar";
 @import "banner";
 @import "footer";
-
-
-body{
-  margin:0px;
-  padding:0px;
-}
+@import "horizontale_tabs";
+@import "verticale_tabs";
+@import "carousel"
