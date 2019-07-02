@@ -1,0 +1,28 @@
+<%= simple_form_for(@creolite) do |f| %>
+  <div class="form-group">
+    <%= f.label :soirée %>
+    <%= f.text_field :soirée, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :lieu %>
+    <%= f.text_field :place, class: 'form-control' %>
+  </div>
+
+    <div class="form-group">
+    <%= f.label :adresse %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <%= link_to "Retour", creolites_path, class: 'btn btn-outline-primary' %>
+  <%= f.submit "Modifier", class: 'btn btn-outline-info' %>
+  <%= link_to "supprimer", creolite_path,
+method: :delete,
+data: { confirm: "êtes-vous sûrs? de vouloir supprimer" },class: "btn btn-outline-warning" %>
+<% end %>
+

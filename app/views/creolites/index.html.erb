@@ -1,0 +1,39 @@
+<div class="creolite_page">
+  <div id="horizontaletabs">
+    <%= render 'shared/horizontale_tabs' %>
+  </div>
+
+  <div class="box-creolite-f">
+    <div class="box-creolite-s">
+      <div class="creolite">
+        <% @creolites.each do |creolite| %>
+          <div class="box-creolite">
+            <div id="headband" class="col-xs-6 col-sm-6 col-md-6">
+              <h2>Prochaine soirée</h2>
+              <h3><%= creolite.soirée %></h3>
+              <p><%= creolite.description %></p>
+              <%= link_to "Modifier", creolite, class: 'btn btn-outline-info'%>
+            </div>
+            <div id="information">
+              <div id="place">
+              <p>Lieux: <%= creolite.place %></p></br>
+              <p>Adresse: <%= creolite.address %></p>
+              </div>
+              <div id="map">Map</div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+
+      <div id="carousel">
+        <%= render 'shared/carousel' %>
+      </div>
+    </div>
+
+    <div id="verticaletabs">
+      <%= render 'shared/verticale_tabs' %>
+    </div>
+  </div>
+</div>
+
