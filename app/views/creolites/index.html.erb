@@ -7,7 +7,8 @@
     <div class="box-creolite-s">
       <div class="creolite">
         <% @creolites.each do |creolite| %>
-          <div class="box-creolite">
+          <div class="box-creolite" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path creolite.photo, height: 300, width: 1100, crop: :fill %>')">
             <div id="headband" class="col-xs-6 col-sm-6 col-md-6">
               <h2>Prochaine soirée</h2>
               <h3><%= creolite.soirée %></h3>
@@ -16,7 +17,7 @@
             </div>
             <div id="information">
               <div id="place">
-              <p>Lieux: <%= creolite.place %></p></br>
+              <p>Lieu: <%= creolite.place %></p></br>
               <p>Adresse: <%= creolite.address %></p>
               </div>
               <div id="map">Map</div>

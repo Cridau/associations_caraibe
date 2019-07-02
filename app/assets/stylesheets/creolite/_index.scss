@@ -9,35 +9,44 @@
     .box-creolite-s{
       display:flex;
       flex-direction:column;
+      padding-left:20px;
       .creolite{
         display:flex;
         flex-direction:column;
-        border:solid blue 1px;
+        color:white;
+        border-radius:2px;
+        // border:solid blue 1px;
         .box-creolite{
-          border:solid 1px green;
           justify-content:space-around;
           display:flex;
+          background-repeat:no-repeat;
+          // border:solid 1px green;
           #headband{
+            border-radius:3px;
+            background:rgba(0,0,0,0.3);
             margin:5px;
-            border:solid purple 1px;
+            // border:solid purple 1px;
           }
           #information{
             display:flex;
             flex-wrap:wrap;
             margin:5px;
-            border:solid red 1px;
             justify-content:space-between;
+            // border:solid red 1px;
             #place{
-              border:solid black 1px;
+              border-radius:3px;
+              background:rgba(0,0,0,0.3);
               height:200px;
               width:150px;
               margin-left:5px;
+              // border:solid black 1px;
             }
             #map{
+              border-radius:3px;
               margin-left:5px;
               height:200px;
               width:200px;
-              border:solid green 1px;
+              // border:solid green 1px;
             }
           }
         }
