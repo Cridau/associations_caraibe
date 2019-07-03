@@ -3,6 +3,10 @@ class CreolitesController < ApplicationController
 
   def index
     @creolites = Creolite.all
+    # @creolites = Creolite.where.not(latidute: nil, longitude: nil)
+    @markers = @creolites.map do |creolite|
+      { lat: creolite.latitude, lng: creolite.longitude}
+    end
   end
 
   def show
