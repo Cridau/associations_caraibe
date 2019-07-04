@@ -5,7 +5,11 @@ class CreolitesController < ApplicationController
     @creolites = Creolite.all
     # @creolites = Creolite.where.not(latidute: nil, longitude: nil)
     @markers = @creolites.map do |creolite|
-      { lat: creolite.latitude, lng: creolite.longitude}
+      {
+        lat: creolite.latitude,
+        lng: creolite.longitude,
+        infowindow: render_to_string(partial: "infowindow", locals: {creolite: creolite })
+      }
     end
   end
 
