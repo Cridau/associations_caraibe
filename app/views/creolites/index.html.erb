@@ -4,6 +4,12 @@
   </div>
 
   <div class="box-creolite-f">
+    <div
+      id="map"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      data-markers="<%= @markers.to_json %>"
+    ></div>
+
     <div class="box-creolite-s">
         <div class="creolite">
           <% @creolites.each do |creolite| %>
@@ -20,16 +26,10 @@
                 <p>Lieu: <%= creolite.place %></p></br>
                 <p>Adresse: <%= creolite.address %></p>
                 </div>
-                <div
-                  id="map"
-                  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-                  data-markers="<%= @markers.to_json %>"
-                ></div>
               </div>
             </div>
           <% end %>
       </div>
-
 
       <div id="carousel">
         <%= render 'shared/carousel' %>
